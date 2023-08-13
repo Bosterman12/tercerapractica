@@ -1,0 +1,20 @@
+{"level":"fatal","message":"GET en /logger - 17:20:59"}
+{"level":"warning","message":"Alerta"}
+{"level":"fatal","message":"GET en /logger - 17:24:18"}
+{"level":"warning","message":"Alerta"}
+{"level":"fatal","message":"GET en /logger - 17:31:44"}
+{"level":"warning","message":"Alerta"}
+{"level":"fatal","message":"GET en /logger - 17:35:21"}
+{"level":"warning","message":"Alerta"}
+{"level":"fatal","message":"GET en /logger - 18:19:39"}
+{"level":"warning","message":"Alerta"}
+{"level":"fatal","message":"GET en /logger - 18:20:44"}
+{"level":"warning","message":"Alerta"}
+{"level":"fatal","message":"GET en /logger - 18:21:36"}
+{"level":"warning","message":"Alerta"}
+{"level":"fatal","message":"GET en /logger - 20:01:15"}
+{"level":"warning","message":"Alerta"}
+{"level":"info","message":"GET en /operacionsencilla - 21:32:37"}
+{"level":"info","message":"GET en /favicon.ico - 23:09:59"}
+{"level":"info","message":"GET en /api/css/styles.css - 23:10:10"}
+{"level":"info","message":"GET en /api/js/main.js - 23:10:10"}
