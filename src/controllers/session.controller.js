@@ -1,5 +1,7 @@
 import {addLogger} from "../utils/logger.js"
 
+
+
 export const testLogin = (req, res, next) => {
    
    try{
@@ -7,11 +9,18 @@ export const testLogin = (req, res, next) => {
            // return res.status(401).send({status: "error", error: "usuario invalido"})
            res.redirect('../api/errorLogin')
         }
-
-            req.session.user = {
+        req.session.user = {
+            first_name: req.user.first_name,
+            last_name: req.user.last_name,
+            gender: req.user.gender,
+            email: req.user.email,
+            role: req.user.role,
+            cart: req.user.cart,
+          }
+            /*req.session.user = {
                 email : req.user.email,
                 first_name: req.user.first_name
-            }
+            }*/
 
             //res.status(200).send({status: "sucess", payload: req.user})
             console.log(req.session.user)

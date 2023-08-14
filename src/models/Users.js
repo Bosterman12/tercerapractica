@@ -1,10 +1,11 @@
 import { Schema, SchemaTypes, model } from "mongoose";
 import paginate from "mongoose-paginate-v2";
+//import mongoose from "mongoose";
 
 
 
 
-const userSchema = new Schema ({
+const userSchema = new Schema  ({
     
     first_name: {
         type: String,
@@ -29,7 +30,7 @@ const userSchema = new Schema ({
         required: true
     },
 
-    cart : {
+   cart : {
         type : SchemaTypes.ObjectId,
         ref: 'carts'
     },
@@ -37,6 +38,7 @@ const userSchema = new Schema ({
     role: {
         type: String,
         required: true,
+        enum: ["admin", "user", "premium"],
         default: 'user'
     }
 })

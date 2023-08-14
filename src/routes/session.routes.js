@@ -6,10 +6,10 @@ const routerSession = Router()
 
 routerSession.get('/', getSession)
 routerSession.post('/login', passport.authenticate('login',{
-    //passReqToCallback: true,
-   // failureRedirect: '../api/errorLogin',
+   // passReqToCallback: true,
+   //failureRedirect: '../api/errorLogin',
    // successRedirect: '../api/product',
-   // failureMessage: '',
+   //failureMessage: '',
   }), testLogin)
 routerSession.get('/logout', destroySession)
 

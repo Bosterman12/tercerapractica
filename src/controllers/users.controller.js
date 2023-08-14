@@ -35,8 +35,8 @@ export const findOneUser = async (req,res) => {
 }
 
 export const createOneUser = async (req, res) => {
-    const { first_name, last_name, email, gender, password } = req.body
-    if (!first_name || !last_name || !email || !gender || !password) {
+    const { first_name, last_name, email, gender, password, role } = req.body
+    if (!first_name || !last_name || !email || !gender || !password || !role) {
       return res.status(400).json({ message: 'Data missing' })
     }
     try {

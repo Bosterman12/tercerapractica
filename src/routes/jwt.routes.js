@@ -17,7 +17,7 @@ router.post('/login', async(req,res) => {
     }
     const isPassword = await compareData(password, userDB.password)
     if(!isPassword){
-        return res.status(401).send('Wrong email or password')
+        return res.status(401).send('Wrong password')
     }
     const token = generateToken(userDB)
     res.status(200).json({message:'Login', token})
