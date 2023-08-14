@@ -57,3 +57,6 @@
 {"level":"info","message":"POST en /api/jwt/lvalidation - 01:12:22"}
 {"level":"info","message":"GET en /api/css/styles.css - 10:15:06"}
 {"level":"info","message":"GET en /api/js/main.js - 10:15:06"}
+{"level":"info","message":"POST en /jwt/login - 17:52:12"}
+{"level":"info","message":"POST en /jwt/login - 17:53:05"}
+{"level":"info","message":"POST en /jwt/login - 17:53:45"}

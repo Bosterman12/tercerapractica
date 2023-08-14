@@ -6,7 +6,7 @@ export const findAllProd = async (req,res) => {
     try{
         const products = await findAllProducts()
             
-           res.render('home', {
+           /*res.render('home', {
                 products: products.docs,
                 
                 user: req.session.user
@@ -14,8 +14,8 @@ export const findAllProd = async (req,res) => {
                 
                
     
-                })
-           //res.status(200).json({message: "products found", products})
+                })*/
+           res.status(200).json({message: "products found", products})
            //res.send(products)
            
            //console.log(products)
@@ -61,7 +61,7 @@ export const createOneProd = async (req, res) => {
           stock,
         }),
         message: 'Error creating product',
-        code: EErrors.INVALID_TYPES_ERROR,
+       code: EErrors.INVALID_TYPES_ERROR,
       })
     }
     try {

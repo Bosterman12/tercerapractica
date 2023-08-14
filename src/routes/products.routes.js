@@ -3,7 +3,7 @@ import { ProductManager } from "../productmanager.js";
 import { productModel } from "../models/Products.js";
 //import { userModel } from "../models/Users.js";
 import { findAllProd, findOneprod, createOneProd,updateOneProd,deleteProd } from "../controllers/products.controller.js";
-//import applyPolicy from "../middleware/role.middleware.js";
+import applyPolicy from "../middleware/role.middleware.js";
 
 const productRouter = Router()
 
@@ -84,8 +84,8 @@ productRouter.delete('/:id', async (req,res) => {
 
 productRouter.get('/',findAllProd)
 productRouter.get('/:id', findOneprod)
-productRouter.post('/', createOneProd)
-productRouter.put('/:id', updateOneProd)
-productRouter.delete('/:id', deleteProd)
+productRouter.post('/', applyPolicy(['admin']), createOneProd)
+productRouter.put('/:id',applyPolicy(['admin']) ,updateOneProd)
+productRouter.delete('/:id',applyPolicy(['admin']) ,deleteProd)
 
 export default productRouter
