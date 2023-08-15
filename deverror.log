@@ -60,3 +60,5 @@
 {"level":"info","message":"POST en /jwt/login - 17:52:12"}
 {"level":"info","message":"POST en /jwt/login - 17:53:05"}
 {"level":"info","message":"POST en /jwt/login - 17:53:45"}
+{"level":"info","message":"PUT en /api/product - 21:18:14"}
+{"level":"info","message":"PUT en /api/product - 21:20:12"}

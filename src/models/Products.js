@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, SchemaTypes, model } from "mongoose";
 import paginate from "mongoose-paginate-v2";
 
 
@@ -30,6 +30,13 @@ const productSchema = new Schema({
     status:{
         type: Boolean,
         default: true
+    },
+    owner:{
+        
+        type: Schema.Types.ObjectId,
+        ref: 'users',
+       
+        default: 'admin'
     },
     tumbnail:[]
 })

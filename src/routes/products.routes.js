@@ -84,8 +84,8 @@ productRouter.delete('/:id', async (req,res) => {
 
 productRouter.get('/',findAllProd)
 productRouter.get('/:id', findOneprod)
-productRouter.post('/', applyPolicy(['admin']), createOneProd)
-productRouter.put('/:id',applyPolicy(['admin']) ,updateOneProd)
-productRouter.delete('/:id',applyPolicy(['admin']) ,deleteProd)
+productRouter.post('/', applyPolicy(['admin', 'premium']), createOneProd)
+productRouter.put('/:id',applyPolicy(['admin', 'premium']) ,updateOneProd)
+productRouter.delete('/:id',applyPolicy(['admin','premium']) ,deleteProd)
 
 export default productRouter
