@@ -44,10 +44,10 @@ export const createCart = async (req, res) => {
   export const updateCart = async (req,res) => {
     const cid = req.params.cid
     const pid = req.params.pid
-    const { quantity } = req.body
+    const { quantity, owner } = req.body
 
     const cart = await findOneCartByid({_id: cid})
-    if ( !pid || !cid ||!quantity) {
+    if ( !pid || !cid ||!quantity||!owner ) {
                 CustomError.createError({
                   name: 'Product creation error',
                   cause: generateErrorAddProductToCart({
@@ -72,10 +72,16 @@ export const createCart = async (req, res) => {
               }*/
           const addProductCart = {
             id_prod: pid,
-            cant: quantity
+            cant: quantity,
+            owner: owner
           }
-          cart.products.push(addProductCart)
-          await updateOneCart({_id: cid}, cart)
+          if(req.user.role === 'premium' || req.user.id === owner) {
+            res.status(401).json({message: 'Ud no puede comprar su propio producto'})
+          }else{
+            cart.products.push(addProductCart)
+            await updateOneCart({_id: cid}, cart)
+          }
+          
         } catch (err) {
           console.log(err)
         }
